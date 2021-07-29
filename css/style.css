@@ -1,0 +1,488 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* The Home */
+
+.home, .questions {
+    background-color: #2b1955;
+    height: 100vh;
+    padding: 40px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.home .start {
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+    margin-top: calc(100% - 93%);
+    text-align: center;
+    color: #fff;
+}
+
+.home .start .logo {
+    width: 50%;
+    margin: 0 auto 25px;
+}
+
+.home .start .logo img {
+    width: 100%;
+}
+
+/* The Questions */
+
+.questions .dolars {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #5434b2;
+    background-color: #440672;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fcc330;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+}
+
+.questions .logo {
+    margin-top: -70px;
+}
+
+.questions .counter {
+    width: 50%;
+    padding: 15px 0;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+.questions .counter div {
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 85px;
+    height: 50px;
+    border-bottom: 5px solid rgba(255, 255, 255, .7);
+    position: relative;
+}
+
+.questions .counter .prog {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-bottom: 5px solid #fcc330;
+}
+
+.questions .counter .txt {
+    line-height: 43px;
+    display: block;
+    margin: 0 auto;
+}
+
+.questions .ques {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.questions .ques .title {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.questions .ques .btn {
+    text-align: right;
+    padding-right: 20px;
+    direction: rtl;
+    width: 47%;
+    font-size: 20px;
+}
+
+.questions .ques .btn:nth-of-type(1),
+.questions .ques .btn:nth-of-type(3) {
+    margin-right: 15px;
+}
+
+.questions .ques .btn:nth-of-type(3),
+.questions .ques .btn:nth-of-type(4) {
+    margin-top: 20px;
+}
+
+.questions .ques .btn span {
+    color: #fcc330;
+}
+
+.questions .money {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.questions .money.unactive {
+    display: none;
+}
+
+.questions .money .money-row {
+    position: absolute;
+    width: 203px;
+    height: 523px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 21px;
+    color: #fff;
+    border: 3px solid #7681f0;
+    border-radius: 5px;
+    background-color: #14274f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.questions .money .money-row li {
+    width: 51%;
+    text-align: center;
+}
+
+.questions .money .money-row li.active {
+    border: 2px solid #fff;
+    border-radius: 50px;
+}
+
+.questions .money .btn {
+    width: 15%;
+    text-align: center;
+    color: #fff;
+    background-color: #343434;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.questions .lose, .call, .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.questions .lose.unactive, .call.unactive, .user.unactive {
+    display: none;
+}
+
+.questions .lose .box, .call .box, .user .box {
+    background-color: #000;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.questions .lose .btn, .call .btn, .user .btn {
+    width: 250px;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.questions .user .box {
+    display: block;
+    width: 350px;
+}
+
+.questions .user .box .progs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.questions .user .box .progs .prog {
+    width: 40px;
+    margin-top: 25px;
+}
+
+.questions .user .box .progs .prog div {
+    height: 100px;
+    background-color: #777;
+    position: relative;
+}
+
+.questions .user .box .progs .prog div span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #fcc330;
+}
+
+.questions .user .box .progs .prog1 div span {
+    height: 27%;
+}
+
+.questions .user .box .progs .prog2 div span {
+    height: 13%;
+}
+
+.questions .user .box .progs .prog3 div span {
+    height: 35%;
+}
+
+.questions .user .box .progs .prog4 div span {
+    height: 5%;
+}
+
+.questions .user .box .progs .prog p {
+    color: #fcc330;
+    margin-top: 10px;
+}
+
+.questions .million {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    display: block;
+    direction: rtl;
+}
+
+.questions .million.unactive {
+    display: none;
+}
+
+.questions .million .img {
+    position: absolute;
+    width: 23%;
+    display: block;
+}
+
+.questions .million .img1 {
+    top: 50px;
+    left: 50px;
+}
+
+.questions .million .img2 {
+    right: 50px;
+    top: 50px;
+}
+
+.questions .million .img3 {
+    bottom: 19px;
+    left: 50px;
+}
+
+.questions .million .img4 {
+    bottom: 19px;
+    right: 50px;
+}
+
+.questions .million .img3,
+.questions .million .img4 {
+    transform: rotate(-20deg);
+}
+
+.questions .million .shake {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 250px;
+    background-color: #fff;
+}
+
+.questions .million .shake .txt-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.questions .million .shake .txt-date .txt {
+    font-family: cursive;
+}
+
+.questions .million .shake  hr {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    width: 100%;
+    height: 3px;
+    background-color: #1e90ff;
+    margin-bottom: 21px;
+}
+
+.questions .million .shake .shake-txt {
+    padding: 15px;
+}
+
+.questions .million .shake .shake-txt h1 {
+    font-weight: 530;
+    margin-bottom: 20px;
+}
+
+.questions .million .shake .shake-txt .val {
+    font-size: 1.7em;
+    border-bottom: 2px solid dodgerblue;
+}
+
+/* The Framework */
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+    }
+
+    .questions .million .shake {
+        width: 90%;
+    }
+}
+@media (min-width: 576px) {
+    .container {
+        width: 550px;
+    }
+
+    .questions .million .shake {
+        width: 90%;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 740px;
+    }
+
+    .questions .million .shake {
+        width: 70%;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 950px;
+    }
+}
+@media (min-width: 1200) {
+    .container {
+        width: 1117;
+    }
+}
+
+.btn {
+    width: 40%;
+    padding: 5px 0;
+    background-color: #642fa6;
+    border: 3px solid #fff;
+    border-radius: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.btn.active {
+    background-color: #f87c3d;
+}
+
+.btn.right {
+    background-color: #218d24;
+}
+
+.icon {
+    width: 75px;
+    height: 75px;
+    line-height: 50px;
+    background-color: #642fa6;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.icon.right {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #fcc330;
+}
+
+.icon.right.unactive {
+    background-color: rgba(0, 0, 0, .2);
+    pointer-events: none;
+}
+
+.icon.right.unactive::before,
+.icon.right.unactive::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 33px;
+    height: 100%;
+    width: 3px;
+    transform: rotate(43deg);
+    background-color: #f00;
+}
+
+.icon.right.unactive::before {
+    transform: rotate(-43deg);
+}
+
+.icon.right.users {
+    top: 95px;
+}
+
+.icon.right.friend {
+    top: 185px;
+}
+
+.logo {
+    width: 30%;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 100%;
+}
